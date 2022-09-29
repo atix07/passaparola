@@ -27,7 +27,7 @@ export const HomeButton = styled.button`
 display: flex;
 width: fit-content;
 height: fit-content;
-padding: 15px 50px;
+padding: 10px 50px;
 border: 2px solid #fff;
 border-radius: 10px;
 font-size: 24px;

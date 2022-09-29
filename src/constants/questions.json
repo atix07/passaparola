@@ -1,0 +1,566 @@
+[
+    {
+        "index": 0,
+        "letter": "a",
+        "questions": [
+            {
+                "question": "Altın Palmiye Ödülleri hangi şehrimizde verilmektedir?",
+                "answer": "antalya"
+            },
+            {
+                "question": "Türkiye’nin en yüksek dağı hangisidir?",
+                "answer": "ağrı dağı"
+            },
+            {
+                "question": "Hollanda’nın başkenti neresidir?",
+                "answer": "amsterdam"
+            },
+            {
+                "question": "Yunan mitolojisinde bilgelik ve sanat tanrısının adı nedir?",
+                "answer": "athena"
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "letter": "b",
+        "questions": [
+            {
+                "question": "Avrupa Birliğinin başkenti neresidir?",
+                "answer": "brüksel"
+            },
+            {
+                "question": "Azerbeycan’ın başkenti neresidir?",
+                "answer": "bakü"
+            },
+            {
+                "question": "İpeği ve şeftalisi ile meşhur ilimiz hangisidir?",
+                "answer": "bursa"
+            },
+            {
+                "question": "Uzun ince raketi olup kaz tüyünden yapılan tüylü topla oynanan oyunun adı nedir?",
+                "answer": "badminton"
+            },
+            {
+                "question": "İçten yanmalı Otomobillerin motor sistemlerine koyduğumuz yakıtı ateşleyen parçanın adı nedir?",
+                "answer": "buji"
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "letter": "c",
+        "questions": [
+            {
+                "question": "Hasis, kısık ve varyemez sözcükleriyle eş anlamlı olan sözcük hangisidir?",
+                "answer": "cimri"
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "letter": "ç",
+        "questions": [
+            {
+                "question": "Geleneklerimize göre evlilik sırasında gelinle birlikte gelen eşyalarıhn ortak adı nedir?",
+                "answer": "çeyiz"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "letter": "d",
+        "questions": [
+            {
+                "question": "Horozları ile meşhur olan ilimiz hangisidir?",
+                "answer": "denizli"
+            },
+            {
+                "question": "Belli bir süre eğitimi tamamladıktan sonra alınan, sir okul ya da eğitim kurumu tarafından verilen belgenin adı?",
+                "answer": "diploma"
+            },
+            {
+                "question": "Sesin şiddetini büyüklüğü birim cinsinden nedir?",
+                "answer": "desibel"
+            },
+            {
+                "question": "Kağıt ve demir paraları basan matbaaların adı nedir?",
+                "answer": "darphane"
+            }
+        ]
+    },
+    {
+        "index": 5,
+        "letter": "e",
+        "questions": [
+            {
+                "question": "Dünya’nın en yüksek tepesi hangisidir?",
+                "answer": "everest"
+            },
+            {
+                "question": "Günümüzde nüfusu en fazla olan İslam ülkesi hangisidir?",
+                "answer": "endonezya"
+            }
+        ]
+    },
+    {
+        "index": 6,
+        "letter": "f",
+        "questions": [
+            {
+                "question": "Ticari yada sanayi bir kuruluşu tanıtmak veya herhangi bir malın satışını arttırmak amacıyla kullanılan çeşitli yolların genel adına ne denir?",
+                "answer": "reklam"
+            },
+            {
+                "question": "Pusulada ( N ) harfi hangi yönü ifade eder?",
+                "answer": "kuzey"
+            },
+            {
+                "question": "Müzik ezgileri yazılırken sesleri gösteren işaretlere ne ad verilir?",
+                "answer": "nota"
+            }
+        ]
+    },
+    {
+        "index": 7,
+        "letter": "g",
+        "questions": [
+            {
+                "question": "Tarihte Türk adıyla kurulan ilk devlet hangisidir?",
+                "answer": "göktürk"
+            },
+            {
+                "question": "Dünyanın en büyük adasının adı nedir?",
+                "answer": "grönland"
+            },
+            {
+                "question": "Türk halk edebiyatında sevgilinin ya da bir yerin özelliklerini övmek için yazılan koşma türündeki eserlere ne ad verilir?",
+                "answer": "güzelleme"
+            },
+            {
+                "question": "Savaşlarda düşmandan elde edilen eşya araç ve başka mallara ne ad verilir?",
+                "answer": "ganimet"
+            }
+        ]
+    },
+    {
+        "index": 8,
+        "letter": "h",
+        "questions": [
+            {
+                "question": "Bugün bile adına tıp yemini edilen İspanyol tıp bilgini kimdir ?",
+                "answer": "Hipokrat"
+            }
+        ]
+    },
+    {
+        "index": 9,
+        "letter": "ı",
+        "questions": [
+            {
+                "question": "Türkiye'nin gül ve gül yağı üretiminde dünya çapındaki şehrimiz neresidir?",
+                "answer": "ısparta"
+            }
+        ]
+    },
+    {
+        "index": 10,
+        "letter": "i",
+        "questions": [
+            {
+                "question": "Nobel ödülleri hangi ülkede verilmektedir?",
+                "answer": "isveç"
+            },
+            {
+                "question": "Kamu kurumlarında şirket ya da kişilere verilen yol, inşaat, alt yapı yatırımı gibi yaptırılan açık artırma ya da açık eksiltme sürecine ne ad verilir?",
+                "answer": "ihale"
+            }
+        ]
+    },
+    {
+        "index": 11,
+        "letter": "j",
+        "questions": [
+            {
+                "question": "Ticari yada sanayi bir kuruluşu tanıtmak veya herhangi bir malın satışını arttırmak amacıyla kullanılan çeşitli yolların genel adına ne denir?",
+                "answer": "reklam"
+            },
+            {
+                "question": "Pusulada ( N ) harfi hangi yönü ifade eder?",
+                "answer": "kuzey"
+            },
+            {
+                "question": "Müzik ezgileri yazılırken sesleri gösteren işaretlere ne ad verilir?",
+                "answer": "nota"
+            }
+        ]
+    },
+    {
+        "index": 12,
+        "letter": "k",
+        "questions": [
+            {
+                "question": "Pusulada ( N ) harfi hangi yönü ifade eder?",
+                "answer": "kuzey"
+            },
+            {
+                "question": "Türkiye’nin en uzun nehri hangisidir?",
+                "answer": "kızılırmak"
+            },
+            {
+                "question": "Osmanlı hukukunda, mahkemelerde yargılamayı yapan görevlinin adı nedir?",
+                "answer": "kadı"
+            },
+            {
+                "question": "Şehirlerde musluktan akan şebeke sularının, dezenfeksiyonu için kullanılan kimyasal maddenin adı nedir?",
+                "answer": "klor"
+            },
+            {
+                "question": "Araçların şehir içinde daha yavaş gitmesini sağlamak için yollarda kullanılan tümseklere ne ad verilir?",
+                "answer": "kasis"
+            }
+        ]
+    },
+    {
+        "index": 13,
+        "letter": "l",
+        "questions": [
+            {
+                "question": "Voleybol takımında aynı takımda olmalarına rağmen farklı renkte forma giyen oyuncuya ne denir?",
+                "answer": "libero"
+            },
+            {
+                "question": "Osmanlıda şehzadelerin özel hocası, eğitmenlerine verilen isim?",
+                "answer": "lala"
+            }
+        ]
+    },
+    {
+        "index": 14,
+        "letter": "m",
+        "questions": [
+            {
+                "question": "Pisagor teoremi hangi bilim dalıyla ilgilidir?",
+                "answer": "matematik"
+            },
+            {
+                "question": "Telgrafta hangi alfabe kullanılır?",
+                "answer": "mors alfabesi"
+            },
+            {
+                "question": "Cennet-cehennem mağaraları hangi ilimizdedir?",
+                "answer": "mersin"
+            },
+            {
+                "question": "Osmanlı mimarisi XV. ve XVI. Yüzyıllarda zirveye ulaşır. Bu dönemde Kanuni adına Süleymaniye Camii, Mostar Köprüsü ve Şehzade Camii gibi önemli eserler veren Osmanlı mimarı kimdir?",
+                "answer": "mimar sinan"
+            },
+            {
+                "question": "Güneşe en yakın gezegen hangisidir?",
+                "answer": "merkür"
+            },
+            {
+                "question": "Saçları yılan şeklinde ve gözlerine bakan insanları taşa çeviren mitoloji kahramanı kimdir?",
+                "answer": "medusa"
+            },
+            {
+                "question": "Ölenden geriye kalan mal veya para?",
+                "answer": "miras"
+            },
+            {
+                "question": "Atletizmde mesafe olarak en uzun koşuya verilen isim nedir?",
+                "answer": "maraton"
+            }
+        ]
+    },
+    {
+        "index": 15,
+        "letter": "n",
+        "questions": [
+            {
+                "question": "Müzik ezgileri yazılırken sesleri gösteren işaretlere ne ad verilir?",
+                "answer": "nota"
+            },
+            {
+                "question": "Boşanmış eşlerden birinin diğerine veya çocuklara boşanma sonrası ödediği aylık bedelin adı nedir?",
+                "answer": "nafaka"
+            }
+        ]
+    },
+    {
+        "index": 16,
+        "letter": "o",
+        "questions": [
+            {
+                "question": "Henüz gerçekleşmemiş fakat gerçekleşmesi mümkün olan, ihtimal",
+                "answer": "olasılık"
+            },
+            {
+                "question": "Sağlığını riske atacak kadar yemek yemeğe düşkün olan kimse",
+                "answer": "obur"
+            },
+            {
+                "question": "Her şeyi en iyi yanından gören, her durumda iyi bir çıkış yolu uman dünya görüşü, iyimserlik, nikbinlik.",
+                "answer": "optimizm"
+            },
+            {
+                "question": "Orkestrada yer alan çift kamışlı, tahta üflemeli çalgı.",
+                "answer": "obua"
+            },
+            {
+                "question": "Halk şairi",
+                "answer": "ozan"
+            }
+        ]
+    },
+    {
+        "index": 17,
+        "letter": "ö",
+        "questions": [
+            {
+                "question": "Korkak, tabansız, yüreksiz",
+                "answer": "ödlek"
+            },
+            {
+                "question": "Önden gidip haber ulaştıran kimse.",
+                "answer": "öncü"
+            },
+            {
+                "question": "Kabul ettirmek amacıyla öne sürülen görüş, düşünce, teklif",
+                "answer": "öneri"
+            },
+            {
+                "question": "Bir kişinin kendisinin anlattığı yaşamı, tercümeihal.",
+                "answer": "özgeçmiş"
+            }
+        ]
+    },
+    {
+        "index": 18,
+        "letter": "p",
+        "questions": [
+            {
+                "question": "Büyük Okyanus ile Atlas Okyanusu’nu birbirine bağlayan kanalın adı nedir?",
+                "answer": "panama"
+            },
+            {
+                "question": "Motorsuz uçağa ne ad verilir",
+                "answer": "planör"
+            },
+            {
+                "question": "Giyimine ya da eşyanın temizliğine, düzenine önem vermeyen, çapaçul.",
+                "answer": "pasaklı"
+            },
+            {
+                "question": "Geceleri açık, içkili eğlence yeri.",
+                "answer": "pavyon"
+            },
+            {
+                "question": "Yoğunluğu 0,8’den 0,95’e kadar değişebilen, hidrokarbürlerden oluşmuş, kendisine özgü kokusu olan, koyu renkli, arıtılmamış, doğal yanıcı mineral yağ, yeryağı.",
+                "answer": "petrol"
+            }
+        ]
+    },
+    {
+        "index": 19,
+        "letter": "r",
+        "questions": [
+            {
+                "question": "Ticari yada sanayi bir kuruluşu tanıtmak veya herhangi bir malın satışını arttırmak amacıyla kullanılan çeşitli yolların genel adına ne denir?",
+                "answer": "reklam"
+            },
+            {
+                "question": "Daha önce aynı şartlar altında yapılmış olan aynı türden bir spor başarısının sonucunu aşan ve bununla ilgili resmi makamlar tarafından da kabul edilmiş spor derecesine ne ad verilir?",
+                "answer": "rekor"
+            },
+            {
+                "question": "Yüz ölçümü bakımından en büyük ülke hangisidir?",
+                "answer": "rusya"
+            },
+            {
+                "question": "Başka bir taşıt tarafından çekilen motorsuz taşıt",
+                "answer": "römork"
+            },
+            {
+                "question": " İnsanda üzüntü, sıkıntı, tedirginlik olmama durumu",
+                "answer": "rahat"
+            }
+        ]
+    },
+    {
+        "index": 20,
+        "letter": "s",
+        "questions": [
+            {
+                "question": "Japonların geleneksel güreşine ne ad verilir?",
+                "answer": "sumo"
+            },
+            {
+                "question": "Toplum Yapısının Şeklini, Gelişimini Ve Değişimini İnceleyen, Bilimsel Metot Ve Araştırma Teknikleri Kullanarak, Toplum Yapısında Meydana Gelen Olayları Yorumlayan, Teoriler Geliştiren Ve Kendi Kavramları İle Kanunlara Ulaşan Bilim Dalına Ne Denir?",
+                "answer": "sosyoloji"
+            },
+            {
+                "question": "Her türlü yayının, sinema ve tiyatro yapıtlarının hükümetçe önceden denetlenmesi işi; yayın ve gösterilmesinin izne bağlı olması, sıkıdenetim.",
+                "answer": "sansür"
+            },
+            {
+                "question": "Kısa sürede çevredeki insan, hayvan ya da bitkilerin büyük bir bölümüne bulaşan, müstevli",
+                "answer": "salgın"
+            },
+            {
+                "question": "Bir şeyin aslına benzetilerek yapılan, düzme, düzmece, imitasyon, taklit",
+                "answer": "sahte"
+            }
+        ]
+    },
+    {
+        "index": 21,
+        "letter": "ş",
+        "questions": [
+            {
+                "question": "Bir olayı gören kişiye ne ad verilir?",
+                "answer": "şahit"
+            },
+            {
+                "question": "Eğlenmek ya da bir olayı kutlamak amacıyla birçok kimsenin bir araya gelerek yedikleri yemek, toy, °ziyafet.",
+                "answer": "şölen"
+            },
+            {
+                "question": "Görkemli, gösterişli.",
+                "answer": "şaşaalı"
+            },
+            {
+                "question": "Acıyarak ve koruyarak sevme, sevecenlik",
+                "answer": "şefkat"
+            },
+            {
+                "question": "Bedensel ya da ruhsal bir hastalığın son bulması, hastalıktan kurtulma, onma.",
+                "answer": "şifa"
+            }
+        ]
+    },
+    {
+        "index": 22,
+        "letter": "t",
+        "questions": [
+            {
+                "question": "Ülkemizin yüzölçümü en büyük ikinci gölü hangisidir?",
+                "answer": "tuz gölü"
+            },
+            {
+                "question": "Para biritirme, bankada hesap açarak, ya da bir kumbarada paralarımızı saklama olayına ne diyoruz?",
+                "answer": "tasarruf"
+            },
+            {
+                "question": "Beğenme, beğenip belirtme, değer verme.",
+                "answer": "takdir"
+            },
+            {
+                "question": "Belli bir örneğe benzemeye ya da benzetmeye çalışma, öykünme",
+                "answer": "taklit"
+            },
+            {
+                "question": "Bir şeyi, bir sanat ya da yazın yapıtını ancak ana çizgileriyle, türlü bölümleriyle belirten ön çalışma",
+                "answer": "taslak"
+            }
+        ]
+    },
+    {
+        "index": 23,
+        "letter": "u",
+        "questions": [
+            {
+                "question": "Kendini akıllı ve bilgili sanan, bilgiçlik taslayan kimse",
+                "answer": "ukala"
+            },
+            {
+                "question": "Türlü amaçlarla yerden fırlatılan ve genellikle kapalı bir yörünge çizerek Yer çevresinde dolanan aygıt",
+                "answer": "uydu"
+            },
+            {
+                "question": "Toplumu, çevresini rahatsız etmeyen, edepli",
+                "answer": "uslu"
+            },
+            {
+                "question": "Bir zanaatı gereği gibi öğrenmiş olan ve kendi başına yapabilen kimse",
+                "answer": "usta"
+            },
+            {
+                "question": "Başkalarına kolayca uyabilen, sözlerini dinleyip karşı gelmeyen, yumuşak başlı.",
+                "answer": "uysal"
+            }
+        ]
+    },
+    {
+        "index": 24,
+        "letter": "ü",
+        "questions": [
+            {
+                "question": "Çekingen, sıkılgan",
+                "answer": "ürkek"
+            },
+            {
+                "question": "Hile, düzen, dolap",
+                "answer": "üçkağıt"
+            },
+            {
+                "question": "Benzerlerine göre daha yüksek bir düzeyde olan, onları geride bırakan",
+                "answer": "üstün"
+            }
+        ]
+    },
+    {
+        "index": 25,
+        "letter": "v",
+        "questions": [
+            {
+                "question": "Türkiyenin en büyük gölünün adı nedir?",
+                "answer": "van gölü"
+            },
+            {
+                "question": "Nüfusu sadece 825 olan, en küçük Avrupa ülkesi hangisidir?",
+                "answer": "vatikan"
+            },
+            {
+                "question": "Taşınmaz mülklerin hayır, eğitim ve sağlık işlerinde kullanılması şartıyla bağışlandığı kurumların ortak adı nedir?",
+                "answer": "vakıf"
+            }
+        ]
+    },
+    {
+        "index": 26,
+        "letter": "y",
+        "questions": [
+            {
+                "question": "Sırbıstan, Karadağ, Hırvatıstan, Bosna Hersek gibi ülkelerin dağılmadan önce kurdukları devletin adı nedir?",
+                "answer": "yugoslavya"
+            },
+            {
+                "question": "Kendi gücünü ve olanaklarını başka birinin iyiliği için kullanma, °muavenet",
+                "answer": "yardım"
+            },
+            {
+                "question": "Vücudu gelişmiş, iri",
+                "answer": "yapılı"
+            }
+        ]
+    },
+    {
+        "index": 27,
+        "letter": "z",
+        "questions": [
+            {
+                "question": "Güçlü bir kimsenin yasaya ya da vicdana aykırı olarak başkasını uğrattığı kötü durum, kıyım, kıygı, acımasızlık, haksızlık, cefa",
+                "answer": "zulüm"
+            },
+            {
+                "question": "Sıkıntı çekilmeden, güçlükle karşılaşmadan yapılan, eziyetsiz, kolay, emeksiz",
+                "answer": "zahmetsiz"
+            },
+            {
+                "question": "Doğal alüminyum ve berilyum silikatı; cam parlaklığında, yeşil renkte, saydam bir süs taşı",
+                "answer": "Zümrüt"
+            }
+        ]
+    }
+]

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
 import React, { useState } from 'react';
 import { useTimer } from 'react-timer-hook';
@@ -13,13 +14,15 @@ import {
   GameQuestionHeader,
   QuestionWrapper,
 } from './gameElements';
+import Questions from '../../constants/questions.json';
 
 const index = () => {
   const [answer, setAnswer] = useState('');
-  const [question, setQuestion] = useState('');
-  const [questionIndex, setQuestionIndex] = useState(1);
-
   const [finished, setFinished] = useState(false);
+
+  const [question, setQuestion] = useState('');
+  const [questionAnswer, setQuestionAnswer] = useState('');
+  const [questionIndex, setQuestionIndex] = useState(0);
 
   const variants = {
     show: { opacity: 1, scale: 1, transition: { duration: 0.25 } },
@@ -30,6 +33,15 @@ const index = () => {
     setFinished(true);
   };
 
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  function getQuestion(qIndex) {
+    const data = Questions[qIndex].questions;
+    return data[getRandomInt(data.length)];
+  }
+
   const {
     seconds,
     minutes,
@@ -37,14 +49,18 @@ const index = () => {
   } = useTimer({ onExpire: () => { EndGame(); } });
 
   const StartGame = () => {
+    setQuestionIndex(0);
     setFinished(false);
-    setQuestionIndex(1);
 
     let time = new Date();
     time = time.setSeconds(time.getSeconds() + 300);
 
+    const data = getQuestion(questionIndex);
+    setQuestionIndex(1);
+
     restart(time);
-    setQuestion('dasdasdasdasdasda asdasdasdasdsad asdasd asdasdasdasd');
+    setQuestion(data.question);
+    setQuestionAnswer(data.answer);
   };
 
   const handleSubmit = (e) => {
@@ -52,13 +68,21 @@ const index = () => {
 
     if (!answer) return console.log('Answer cant be empty');
 
+    if (questionAnswer.toString() === (answer.toLocaleLowerCase()).toString()) {
+      console.log('Doğru cevap');
+    }
+
     setQuestion('');
     setAnswer('');
 
     // Get new question
     setTimeout(() => {
       setQuestionIndex(questionIndex + 1);
-      setQuestion('dasdasdasdasdasda asdasdasdasdsad asdasd asdasdasdasd');
+
+      const data = getQuestion(questionIndex);
+
+      setQuestion(data.question);
+      setQuestionAnswer(data.answer);
     }, [500]);
   };
 
@@ -71,7 +95,11 @@ const index = () => {
     // Get new question
     setTimeout(() => {
       setQuestionIndex(questionIndex + 1);
-      setQuestion('dasdasdasdasdasda asdasdasdasdsad asdasd asdasdasdasd');
+
+      const data = getQuestion(questionIndex);
+
+      setQuestion(data.question);
+      setQuestionAnswer(data.answer);
     }, [500]);
   };
 
