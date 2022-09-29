@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
+import { MainContainer, MainWrapper } from './components/main/mainElements';
+
+// Sections
+import HomeSection from './components/home';
+import GameSection from './components/game';
 
 function App() {
+  const [started, setStarted] = useState(false);
+  const [finished, setFinished] = useState(false);
+
+  const startGame = () => {
+    setStarted(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+      <MainWrapper>
+        {!started
+          ? <HomeSection startGame={startGame} />
+          : <GameSection />}
+      </MainWrapper>
+    </MainContainer>
   );
 }
 
