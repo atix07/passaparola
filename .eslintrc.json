@@ -26,7 +26,8 @@
         "no-console": "off",
         "no-alert": "off",
         "linebreak-style": "off",
-        "react/function-component-definition": "off"
+        "react/function-component-definition": "off",
+        "no-plusplus": "off"
     }
 }
 

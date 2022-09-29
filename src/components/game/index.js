@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTimer } from 'react-timer-hook';
 import {
   TimerWrapper,
@@ -17,12 +17,11 @@ import {
 import Questions from '../../constants/questions.json';
 
 const index = () => {
-  const [answer, setAnswer] = useState('');
-  const [finished, setFinished] = useState(false);
-
-  const [question, setQuestion] = useState('');
-  const [questionAnswer, setQuestionAnswer] = useState('');
-  const [questionIndex, setQuestionIndex] = useState(0);
+  const [playAnim, setPlayAnim] = useState(false);
+  const [selectedQuestions, setSelectedQuestions] = useState([]);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [myAnswer, setMyAnswer] = useState('');
+  const [isEnd, setIsEnd] = useState(false);
 
   const variants = {
     show: { opacity: 1, scale: 1, transition: { duration: 0.25 } },
@@ -30,17 +29,54 @@ const index = () => {
   };
 
   const EndGame = () => {
-    setFinished(true);
+    setIsEnd(true);
   };
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
-  function getQuestion(qIndex) {
-    const data = Questions[qIndex].questions;
-    return data[getRandomInt(data.length)];
-  }
+  const markAnswered = () => {
+    const tempData = selectedQuestions.map((data) => {
+      if (data.index === currentQuestion) {
+        return {
+          ...data,
+          answered: true,
+        };
+      }
+      return data;
+    });
+    setSelectedQuestions(tempData);
+  };
+
+  const getQuestions = () => {
+    for (let i = 0; i < 28; i++) {
+      const data = Questions[i].questions;
+      const randData = data[getRandomInt(data.length)];
+      setSelectedQuestions((prev) => [
+        ...prev,
+        {
+          question: randData.question,
+          answer: randData.answer,
+          index: i,
+          answered: false,
+        },
+      ]);
+    }
+  };
+
+  useEffect(() => {
+    getQuestions();
+  }, []);
+
+  useEffect(() => {
+    if (currentQuestion >= 28) {
+      setCurrentQuestion(0);
+    }
+    if (selectedQuestions[currentQuestion]?.answered === true) {
+      setCurrentQuestion(currentQuestion + 1);
+    }
+  }, [currentQuestion]);
 
   const {
     seconds,
@@ -49,57 +85,44 @@ const index = () => {
   } = useTimer({ onExpire: () => { EndGame(); } });
 
   const StartGame = () => {
-    setQuestionIndex(0);
-    setFinished(false);
+    setIsEnd(false);
+    setCurrentQuestion(0);
 
     let time = new Date();
     time = time.setSeconds(time.getSeconds() + 300);
-
-    const data = getQuestion(questionIndex);
-    setQuestionIndex(1);
-
     restart(time);
-    setQuestion(data.question);
-    setQuestionAnswer(data.answer);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!answer) return console.log('Answer cant be empty');
+    if (!myAnswer) return console.log('Answer cant be empty');
 
-    if (questionAnswer.toString() === (answer.toLocaleLowerCase()).toString()) {
-      console.log('Doğru cevap');
+    if (selectedQuestions[currentQuestion].answer.toString()
+    === (myAnswer.toLocaleLowerCase()).toString()) {
+      markAnswered();
     }
 
-    setQuestion('');
-    setAnswer('');
+    setPlayAnim(true);
+    setMyAnswer('');
 
     // Get new question
     setTimeout(() => {
-      setQuestionIndex(questionIndex + 1);
-
-      const data = getQuestion(questionIndex);
-
-      setQuestion(data.question);
-      setQuestionAnswer(data.answer);
+      setPlayAnim(false);
+      setCurrentQuestion(currentQuestion + 1);
     }, [500]);
   };
 
   const handlePass = (e) => {
     e.preventDefault();
 
-    setQuestion('');
-    setAnswer('');
+    setPlayAnim(true);
+    setMyAnswer('');
 
     // Get new question
     setTimeout(() => {
-      setQuestionIndex(questionIndex + 1);
-
-      const data = getQuestion(questionIndex);
-
-      setQuestion(data.question);
-      setQuestionAnswer(data.answer);
+      setPlayAnim(false);
+      setCurrentQuestion(currentQuestion + 1);
     }, [500]);
   };
 
@@ -110,26 +133,26 @@ const index = () => {
       transition={{ duration: 1 }}
       onAnimationComplete={() => StartGame()}
     >
-      {!finished ? (
+      {!isEnd ? (
         <>
           <QuestionWrapper
             variants={variants}
-            animate={question ? 'show' : 'hidden'}
+            animate={playAnim ? 'hidden' : 'show'}
             transition={{ duration: 1 }}
           >
-            <GameQuestionHeader>{`Soru ${questionIndex}:`}</GameQuestionHeader>
-            <GameQuestiontext>{question}</GameQuestiontext>
+            <GameQuestionHeader>{`Soru ${currentQuestion + 1}:`}</GameQuestionHeader>
+            <GameQuestiontext>{selectedQuestions[currentQuestion]?.question}</GameQuestiontext>
           </QuestionWrapper>
           <GameForm>
             <GameInput
-              value={answer}
-              onChange={(e) => setAnswer(e.target.value)}
+              value={myAnswer}
+              onChange={(e) => setMyAnswer(e.target.value)}
               placeholder="Cevap"
               type="text"
             />
             <GameButtonWrapper>
-              <GameButton onClick={handleSubmit}>Cevapla</GameButton>
-              <GameButton onClick={handlePass}>Pas</GameButton>
+              <GameButton disabled={playAnim} onClick={handleSubmit}>Cevapla</GameButton>
+              <GameButton disabled={playAnim} onClick={handlePass}>Pas</GameButton>
             </GameButtonWrapper>
           </GameForm>
           <TimerWrapper>
