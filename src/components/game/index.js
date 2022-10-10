@@ -24,10 +24,15 @@ const index = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [myAnswer, setMyAnswer] = useState('');
   const [isEnd, setIsEnd] = useState(false);
+  const state = {
+    true: 0,
+    false: 0,
+    empty: 0,
+  };
 
   const handleScroll = () => {
     const anchor = document.getElementById((currentQuestion + 1).toString());
-    if (anchor) { anchor.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    if (anchor) { anchor.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   };
 
   const variants = {
@@ -37,6 +42,13 @@ const index = () => {
 
   const EndGame = () => {
     setIsEnd(true);
+
+    selectedQuestions.forEach((question) => {
+      if (question.answered === false) state.empty += 1;
+      if (question.isTrue === true) state.true += 1;
+      else { state.false += 1; }
+    });
+    console.log(state);
   };
 
   function getRandomInt(max) {
@@ -96,11 +108,15 @@ const index = () => {
 
   useEffect(() => {
     if (currentQuestion >= 28) {
-      setCurrentQuestion(0);
+      const checker = selectedQuestions.every((question) => question.answered === true);
+      if (checker) return EndGame();
+      return setCurrentQuestion(0);
     }
+
     if (selectedQuestions[currentQuestion]?.answered === true) {
       setCurrentQuestion(currentQuestion + 1);
     }
+
     handleScroll();
   }, [currentQuestion]);
 
@@ -193,7 +209,7 @@ const index = () => {
             </GameButtonWrapper>
           </GameForm>
           <TimerWrapper>
-            <TimeText>Kalan zaman</TimeText>
+            <TimeText>Kalan süre</TimeText>
             <TimeText>{`${minutes}:${seconds}`}</TimeText>
           </TimerWrapper>
         </>
