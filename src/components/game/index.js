@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-nested-ternary */
 /* eslint-disable consistent-return */
 import React, { useEffect, useState } from 'react';
 import { useTimer } from 'react-timer-hook';
@@ -13,6 +13,8 @@ import {
   GameQuestiontext,
   GameQuestionHeader,
   QuestionWrapper,
+  LetterWrapper,
+  Letter,
 } from './gameElements';
 import Questions from '../../constants/questions.json';
 
@@ -22,6 +24,11 @@ const index = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [myAnswer, setMyAnswer] = useState('');
   const [isEnd, setIsEnd] = useState(false);
+
+  const handleScroll = () => {
+    const anchor = document.getElementById((currentQuestion + 1).toString());
+    if (anchor) { anchor.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  };
 
   const variants = {
     show: { opacity: 1, scale: 1, transition: { duration: 0.25 } },
@@ -42,6 +49,21 @@ const index = () => {
         return {
           ...data,
           answered: true,
+          isTrue: selectedQuestions[currentQuestion].answer.toString()
+          === (myAnswer.toLocaleLowerCase()).toString(),
+        };
+      }
+      return data;
+    });
+    setSelectedQuestions(tempData);
+  };
+
+  const markPassed = () => {
+    const tempData = selectedQuestions.map((data) => {
+      if (data.index === currentQuestion) {
+        return {
+          ...data,
+          passed: true,
         };
       }
       return data;
@@ -60,6 +82,9 @@ const index = () => {
           answer: randData.answer,
           index: i,
           answered: false,
+          passed: false,
+          isTrue: false,
+          letter: Questions[i].letter,
         },
       ]);
     }
@@ -76,6 +101,7 @@ const index = () => {
     if (selectedQuestions[currentQuestion]?.answered === true) {
       setCurrentQuestion(currentQuestion + 1);
     }
+    handleScroll();
   }, [currentQuestion]);
 
   const {
@@ -98,10 +124,7 @@ const index = () => {
 
     if (!myAnswer) return console.log('Answer cant be empty');
 
-    if (selectedQuestions[currentQuestion].answer.toString()
-    === (myAnswer.toLocaleLowerCase()).toString()) {
-      markAnswered();
-    }
+    markAnswered();
 
     setPlayAnim(true);
     setMyAnswer('');
@@ -115,6 +138,8 @@ const index = () => {
 
   const handlePass = (e) => {
     e.preventDefault();
+
+    markPassed();
 
     setPlayAnim(true);
     setMyAnswer('');
@@ -135,6 +160,18 @@ const index = () => {
     >
       {!isEnd ? (
         <>
+          <LetterWrapper id="scroll-container">
+            {selectedQuestions.map((question) => (
+              <Letter
+                active={currentQuestion === question.index}
+                background={question.passed && !question.answered ? '#FFFFE0' : question.answered && question.isTrue ? '#90EE90' : (question.answered ? '#FFCCCB' : '#fff')}
+                key={question.index}
+                id={question.index}
+              >
+                {(question.letter).toUpperCase()}
+              </Letter>
+            ))}
+          </LetterWrapper>
           <QuestionWrapper
             variants={variants}
             animate={playAnim ? 'hidden' : 'show'}
@@ -156,8 +193,8 @@ const index = () => {
             </GameButtonWrapper>
           </GameForm>
           <TimerWrapper>
-            <TimeText>{`Dakika: ${minutes}`}</TimeText>
-            <TimeText>{`Saniye: ${seconds}`}</TimeText>
+            <TimeText>Kalan zaman</TimeText>
+            <TimeText>{`${minutes}:${seconds}`}</TimeText>
           </TimerWrapper>
         </>
       ) : (

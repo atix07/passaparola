@@ -32,7 +32,6 @@ border: 2px solid #fff;
 border-radius: 10px;
 font-size: 24px;
 background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 background-size: 300% 100%;
 -o-transition: all .2s ease-in-out;
 -webkit-transition: all .2s ease-in-out;
@@ -57,6 +56,7 @@ margin-right: auto;
     -o-transition: all .2s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .2s ease-in-out;
+    box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.50);
 }
 `;
 
